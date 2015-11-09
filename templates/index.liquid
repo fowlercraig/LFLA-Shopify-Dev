@@ -62,11 +62,19 @@
       <ul class="nav">
         <li class="cart">
           <a href="/search" class="search ss-search ss-gizmo"></a> | 
-          <a href="/cart" id="CartToggle" class="ss-cart ss-gizmo">
-            <span class="icon-fallback-text"><span class="icon icon-cart" aria-hidden="true"></span></span>
-            <span id="CartCount">{{ cart.item_count }}</span>
-            {{ 'layout.cart.items_count' | t: count: cart.item_count }}
-          </a>
+          <div class="cart-wrapper">
+            <a href="#" id="CartToggle" class="ss-cart ss-gizmo">
+              <span class="icon-fallback-text"><span class="icon icon-cart" aria-hidden="true"></span></span>
+              <span class="cart-count">{{ 'layout.cart.items_count' | t: count: cart.item_count }}</span>
+              
+            </a>
+            <div class="cart-items-wrap" data-cart-view="data-cart-view">
+              <div class="cart-items" rv-each-item="cart.items">
+                {% include 'cart-contents' %}
+              </div>
+              <div class="wrapper"><a href="/cart" class="checkout cart-icon ss-gizmo ss-right right">Checkout</a>
+            </div>
+          </div>
         </li>
       </ul>
     </div>

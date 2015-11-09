@@ -1,0 +1,14 @@
+<div class="wrapper">
+  <div clas="cart-item cart-ajax_item">
+    <div class="fs-row">
+      <div class="fs-cell fs-lg-full fs-md-full fs-sm-3 text-left">
+        <a rv-href='item.url' class="text-right">
+          (<span class="color-white" rv-text="item.quantity"></span>) 
+          <span class="color-white" rv-text="item.title"></span><br>
+          <span class="color-gray color-grey" rv-html="item.price | money Currency.currentCurrency"></span>
+        </a>
+      </div>
+    </div>
+    <hr class="divider">
+  </div>
+</div>
