@@ -65,7 +65,8 @@
           <div class="cart-wrapper">
             <a href="#" id="CartToggle" class="ss-cart ss-gizmo">
               <span class="icon-fallback-text"><span class="icon icon-cart" aria-hidden="true"></span></span>
-              <span class="cart-count">{{ 'layout.cart.items_count' | t: count: cart.item_count }}</span>
+              <span class="cart-count">{{ cart.item_count }}</span>
+              <span>{{ 'layout.cart.items_count' | t: count: cart.item_count }}</span>
               
             </a>
             <div class="cart-items-wrap" data-cart-view="data-cart-view">
