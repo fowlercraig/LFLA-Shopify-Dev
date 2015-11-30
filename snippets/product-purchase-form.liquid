@@ -19,7 +19,7 @@
   {% if product.available == true %}
   <button type="submit" name="add" id="AddToCart" class="button hollow"><span id="AddToCartText">{{ 'products.product.add_to_cart' | t }}</span></button>
   {% else %}
-  <button type="submit" class="button hollow disabled"><span id="AddToCartText">Sold Out</span></button>
+  <button class="button hollow disabled"><span>Sold Out</span></button>
   {% endif %}
 
   <span class="button hollow noborder">Share
