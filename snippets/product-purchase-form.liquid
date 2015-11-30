@@ -18,7 +18,10 @@
   <!--<input type="number" id="Quantity" name="quantity" value="1" min="1" class="button hollow quantity-selector">-->
   {% if product.available == true %}
   <button type="submit" name="add" id="AddToCart" class="button hollow"><span id="AddToCartText">{{ 'products.product.add_to_cart' | t }}</span></button>
+  {% else %}
+  <button type="submit" class="button hollow disabled"><span id="AddToCartText">Sold Out</span></button>
   {% endif %}
+
   <span class="button hollow noborder">Share
     <a target="blank" href="https://www.facebook.com/sharer/sharer.php?u={{ shop.url }}{{ product.url }}" class="social-link"><i class="ss-icon ss-social-circle">Facebook</i></a>
     <a target="blank" href="https://twitter.com/home?status={{ product.title }} } | {{ shop.url }}{{ product.url }}" class="social-link"><i class="ss-icon ss-social-circle">Twitter</i></a>
